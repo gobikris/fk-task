@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+.size{
+  font-size: large;
+}
+.colour{
+  background: #26a541;
+}
+.colour2{
+  color: #26a541;
+}
+.space{
+  /* gap: 10rem;
+   */
+    word-spacing: 10rem;
+
+
+  }
+  .cur{
+    cursor: pointer;
+  }
+  .btncolour{
+    background-color: #fb641b;
+    padding: 5px;
+    height: 4rem;
+    width: 15rem;
+    border: none;
+    
+
+  }
+  .btncolour2{
+    background-color: #ff9f00;
+    width: 15rem;
+    border: none;
+  }
+
+  .foo{
+    gap: 5rem;
+  }
+  .fbg{
+    background-color: #172337;
+    height: 50vh;
+    width: 100%;
+  }
+  .pro{
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
+    
+  }
+  .hands{
+    cursor: pointer;
+    transition: transform .2s;
+  }
+  .hands:hover {
+    /* color:rgb(222, 13, 13); */
+    transform: scale(1.1);
+  }
