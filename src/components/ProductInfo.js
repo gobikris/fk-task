@@ -199,7 +199,7 @@ getProinfo()
             <p className="d-flex">
   
   <h3 class=" fw-bold cur"  data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-   Product Details
+   Product Details <i class="fa fa-arrow-down" aria-hidden="true"></i>
   </h3>
   
   
@@ -214,10 +214,7 @@ getProinfo()
     <table class="table table-borderless ">
   <thead>
     <tr>
-      {/* <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th> */}
+      
     </tr>
   </thead>
   <tbody>

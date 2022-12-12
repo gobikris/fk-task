@@ -43,7 +43,7 @@ getAll();
               <>
               <div className="col mb-3">
 
-              <div class="card hands shadow-lg" style={{width: "18rem"}} key={i} onClick={()=>navigate(`/info/${id}`)}>
+              <div class="card hands shadow-lg mx-auto" style={{width: "18rem"}} key={i} onClick={()=>navigate(`/info/${id}`)}>
   <img src={img} class="card-img-top pro" alt="..."/>
   <div class="card-body">
     <div className='d-flex  justify-content-between'>
