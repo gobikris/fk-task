@@ -213,7 +213,7 @@ export default function ProductDetail() {
               aria-controls="collapseExample"
             >
               Product Details{" "}
-              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              <i class="fa fa-chevron-down " aria-hidden="true"></i>
             </h3>
           </p>
           <hr />
