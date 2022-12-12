@@ -53,7 +53,7 @@ function Footer() {
           </div>
           <hr />
 
-          <div className="d-flex gap-3">
+          {/* <div className="d-flex gap-3">
             <p>
               <i class="fa fa-suitcase text-warning" aria-hidden="true"></i>{" "}
               Became a seller
@@ -73,12 +73,13 @@ function Footer() {
               ></i>{" "}
               Help Center
             </p>
+            
             <img
               className=""
               src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/payment-method_69e7ec.svg"
               alt=""
-            />
-          </div>
+            /> 
+          </div>*/}
         </div>
       </div>
     </div>
