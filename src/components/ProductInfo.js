@@ -1,24 +1,17 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import data from "./data";
 import Footer from "./Footer";
-// import { useNavigate, useParams } from "react-router-dom";
-// import { addProduct } from "../redux/cartRedux";
-// import { useDispatch } from "react-redux/es/hooks/useDispatch";
-// import { API_URL } from "../auth.service/auth.service";
-// import InfoNav from "./InfoNav";
 
 export default function ProductDetail() {
-
-  // data 
+  // data
   const [pro, setPro] = useState({});
 
   // id data
   const { id } = useParams();
   // console.log(pro);
 
-  // api 
+  // api
   const getProinfo = async () => {
     try {
       const { data } = await axios.get(
@@ -46,6 +39,7 @@ export default function ProductDetail() {
             className="carousel slide  mx-5 "
             data-bs-ride="carousel"
           >
+            {/* img */}
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
@@ -54,6 +48,7 @@ export default function ProductDetail() {
                   alt="..."
                 />
               </div>
+              {/* img1 */}
               <div className="carousel-item">
                 <img
                   src={pro.img1}
@@ -61,6 +56,7 @@ export default function ProductDetail() {
                   alt="..."
                 />
               </div>
+              {/* img2 */}
               <div className="carousel-item">
                 <img
                   src={pro.img2}
@@ -69,6 +65,7 @@ export default function ProductDetail() {
                 />
               </div>
             </div>
+            {/* fwd and backword btn */}
             <button
               className="carousel-control-prev"
               type="button"
@@ -136,6 +133,7 @@ export default function ProductDetail() {
               alt=""
             />
           </div>
+          {/* offer section */}
           <div className="">
             <p className="fw-bold">Available offers</p>
             <p>
@@ -178,6 +176,7 @@ export default function ProductDetail() {
             <option value="4XL">4 XL</option>
             <option value="5XL">5 XL</option>
           </select>
+          {/* size model trigger */}
           <button
             className="mt-2 btn btn-outline-primary border-0 bg-transparent btn-lg"
             aria-hidden="true"
@@ -204,6 +203,7 @@ export default function ProductDetail() {
             <p className="text-primary fw-bold"> See other seller</p>
           </div>
           <hr />
+          {/* product description table */}
           <p className="d-flex">
             <h3
               class=" fw-bold cur"
@@ -220,36 +220,32 @@ export default function ProductDetail() {
           <div class="collapse" id="collapseExample">
             <div class="card card-body">
               <div className="">
+                {/* product description table */}
                 <table class="table table-borderless ">
                   <thead>
                     <tr></tr>
                   </thead>
                   <tbody>
                     <tr>
-                      {/* <th scope="row">1</th> */}
                       <td>Type</td>
                       <td>Polo Neck</td>
                     </tr>
                     <tr>
-                      {/* <th scope="row">2</th> */}
                       <td>Sleeve</td>
                       <td>Half Sleeve</td>
                     </tr>
 
                     <tr>
-                      {/* <th scope="row">2</th> */}
                       <td>Fit</td>
                       <td>Regular</td>
                     </tr>
 
                     <tr>
-                      {/* <th scope="row">2</th> */}
                       <td>Fabric</td>
                       <td>Cotton Blend</td>
                     </tr>
 
                     <tr>
-                      {/* <th scope="row">2</th> */}
                       <td>Sales Package</td>
                       <td>2</td>
                     </tr>
@@ -296,6 +292,7 @@ export default function ProductDetail() {
               </div>
             </div>
           </div>
+          {/* rating  */}
           <div className="d-flex justify-content-between mt-5">
             <h3>Rating & Reviews</h3>
             <p
@@ -308,6 +305,7 @@ export default function ProductDetail() {
             </p>
           </div>
           <br />
+          {/* Comments */}
           <div className="">
             <h6>What ours customers felt </h6>
             <i class="fa fa-2x fa-smile-o colour2" aria-hidden="true"></i>
@@ -336,6 +334,7 @@ export default function ProductDetail() {
               </small>
             </div>
           </div>
+          {/* Customer imgs */}
           <div className="d-flex gap-3 mt-3">
             <img
               width="55rem"
@@ -352,7 +351,6 @@ export default function ProductDetail() {
             <img src="" alt="" />
           </div>
           <hr />
-
           {/* Qus and Ans */}
           <h3 className="mt-5">Questions and Answers</h3>
           <p className="mt-3 fw-bold">
@@ -407,8 +405,6 @@ export default function ProductDetail() {
             </p>
           </div>
           <hr />
-          {/* model trigger */}
-          
           {/*  model start */}
           <div
             className="modal fade"

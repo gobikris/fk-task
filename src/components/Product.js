@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
-import { useEffect } from "react";
 
 function Product() {
   // navigate
@@ -20,10 +19,9 @@ function Product() {
       const { data } = await axios.get(
         `https://62556e3352d8738c6921d09a.mockapi.io/user`
       );
-      console.log(data);
+      // console.log(data);
       setList(data);
       setIsLoading(false);
-
     } catch (error) {
       console.log(error.message);
     }
@@ -37,41 +35,37 @@ function Product() {
     <>
       <div className="container" style={{ marginTop: "120px" }}>
         <div className="row mb-2">
+          {isLoading && (
+            <div className="text-center mt-5">
+              {/* loader */}
+              <div className="spinner-grow text-primary" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-secondary" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-success" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-danger" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-warning" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-info" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-danger" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-dark" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          )}
 
-        {isLoading && (
-          <div className="text-center mt-5">
-
-            {/* loader */}
-            <div className="spinner-grow text-primary" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <div className="spinner-grow text-secondary" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <div className="spinner-grow text-success" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <div className="spinner-grow text-danger" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <div className="spinner-grow text-warning" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <div className="spinner-grow text-info" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <div className="spinner-grow text-danger" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <div className="spinner-grow text-dark" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            
-          </div>
-        )}
-
-
-            {/* data */}
+          {/* data */}
           {list.map &&
             list
               .filter((s) => s.name.toLowerCase())
@@ -79,6 +73,7 @@ function Product() {
                 const { name, id, price, mrp, miniName, offer, img } = g;
                 return (
                   <>
+                    {/* cards start */}
                     <div className="col mb-3">
                       <div
                         class="card hands shadow-lg mx-auto"
